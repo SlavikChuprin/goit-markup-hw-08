@@ -105,7 +105,8 @@ h2 {
 
 .logo {
   display: block;
-  margin-right: 93px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -151,6 +152,7 @@ header {
 
 .navigation.is-open {
   display: block;
+  z-index: 100;
 }
 
 .navigation__list {
@@ -169,21 +171,14 @@ header {
 }
 
 .navigation__link {
-  display: block;
+  display: inline-block;
   height: 100%;
   color: #212121;
 }
 
-.navigation__item:hover .navigation__link {
+.navigation__item:hover .navigation__link,
+.navigation__item:focus .navigation__link {
   color: #2196f3;
-}
-
-.navigation__current-page-link {
-  color: #2196f3;
-}
-
-.navigation__current-page {
-  position: relative;
 }
 
 .contacts {
@@ -248,11 +243,6 @@ header {
 .btn-mobile-menu:focus .btn-mobile-menu__icon-cross,
 .btn-mobile-menu:hover .btn-mobile-menu__icon-cross {
   fill: #2196f3;
-}
-
-.btn-mobile-menu:focus .btn-mobile-menu__icon-cross .navigation__current-page-link,
-.btn-mobile-menu:hover .btn-mobile-menu__icon-cross .navigation__current-page-link {
-  color: #212121;
 }
 
 .hero {
