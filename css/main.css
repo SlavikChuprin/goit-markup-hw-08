@@ -245,9 +245,14 @@ header {
   display: none;
 }
 
-.btn-mobile-menu__icon-cross:focus,
-.btn-mobile-menu__icon-cross:hover {
+.btn-mobile-menu:focus .btn-mobile-menu__icon-cross,
+.btn-mobile-menu:hover .btn-mobile-menu__icon-cross {
   fill: #2196f3;
+}
+
+.btn-mobile-menu:focus .btn-mobile-menu__icon-cross .navigation__current-page-link,
+.btn-mobile-menu:hover .btn-mobile-menu__icon-cross .navigation__current-page-link {
+  color: #212121;
 }
 
 .hero {

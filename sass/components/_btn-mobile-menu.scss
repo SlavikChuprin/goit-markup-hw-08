@@ -21,7 +21,10 @@
   display: none;
 }
 
-.btn-mobile-menu__icon-cross:focus,
-.btn-mobile-menu__icon-cross:hover {
+.btn-mobile-menu:focus .btn-mobile-menu__icon-cross,
+.btn-mobile-menu:hover .btn-mobile-menu__icon-cross {
   fill: $fill;
+  .navigation__current-page-link {
+    color: $text-h;
+  }
 }
