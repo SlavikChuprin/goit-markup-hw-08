@@ -5,6 +5,9 @@
   border: none;
   background-color: transparent;
   z-index: 999;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .btn-mobile-menu.is-open {

@@ -1,16 +1,21 @@
 .navigation {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-  background-color: $background-color;
+    background-color: $background-color;
 
-  &.is-open {
-    display: block;
-    z-index: 100;
+    &.is-open {
+      display: block;
+      z-index: 100;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
 
@@ -25,19 +30,28 @@
   line-height: 1.175;
   letter-spacing: 0.02em;
 
-  // display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .navigation__item {
-  //   height: 100%;
+  height: 100%;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
 
-  //   font-weight: 500;
-  //   font-size: 14px;
-  //   letter-spacing: 0.02em;
-  //   line-height: 1.14;
-
-  &:not(:last-child) {
-    margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
   }
 }
 
@@ -46,41 +60,40 @@
   height: 100%;
 
   color: $text-h;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
 
-  .navigation__item:hover &,
-  .navigation__item:focus & {
-    color: $fill;
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
+@media screen and (min-width: 768px) {
+  .navigation__current-page-link {
+    color: $fill;
 
-// .navigation__current-page-link {
-//   color: $fill;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
 
-// &::after {
-//   content: '';
-//   display: block;
-//   width: 100%;
-//   height: 4px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
 
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
+      background: $fill;
+      border-radius: 2px;
+    }
+  }
 
-//   background: $fill;
-//   border-radius: 2px;
-// }
-// }
+  .navigation__current-page {
+    position: relative;
+  }
 
-// .navigation__current-page {
-//   position: relative;
-// }
-
-// .contacts__icon {
-//   margin-right: 10px;
-//   fill: $main-text;
-//   transition-property: fill;
-//   transition-duration: 250ms;
-//   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-// }
+  .contacts__icon {
+    margin-right: 10px;
+    fill: $main-text;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

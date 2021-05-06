@@ -1,52 +1,84 @@
 .contacts {
   margin-top: 305px;
   padding-left: 40px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    margin-left: 84px;
+    padding: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $main-text;
+  }
 }
 
 .contacts__email {
   display: none;
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+  }
 }
 
 .contacts__phone {
   display: none;
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+  }
 }
 
-.contacts__item:not(:last-child) {
-  margin-bottom: 32px;
-}
-.contacts__icon-link--phone {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.18;
-  letter-spacing: 0.02em;
+@media screen and (max-width: 767px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  .contacts__icon-link--phone {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
 
-  color: $fill;
-}
+    color: $fill;
+  }
 
-.contacts__icon-link--email {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
+  .contacts__icon-link--email {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
 }
-
-// .contacts__item:hover .contacts__icon {
-//   fill: $fill;
+.contacts__icon-link {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+// .contacts__item {
+//   @media screen and (min-width: $tablet) {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
 // }
+.contacts__item:hover .contacts__icon {
+  fill: $fill;
+}
 
-// .contacts__icon-link:focus .contacts__icon {
-//   fill: $fill;
-// }
-
-// .contacts__icon-link {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+.contacts__icon-link:focus .contacts__icon {
+  fill: $fill;
+}
 
 // .contacts {
 //   display: flex;
@@ -64,10 +96,4 @@
 
 // .contacts__item + .contacts__item {
 //   margin-left: 50px;
-// }
-
-// .contacts__item {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
 // }
