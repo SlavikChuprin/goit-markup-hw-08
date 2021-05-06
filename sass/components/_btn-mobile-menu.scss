@@ -1,0 +1,21 @@
+.btn-mobile-menu {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.btn-mobile-menu__icon-cross {
+  display: none;
+}
+
+.btn-mobile-menu.is-open {
+  .btn-mobile-menu__icon-cross {
+    display: block;
+  }
+
+  .btn-mobile-menu__icon-burger {
+    display: none;
+  }
+}
