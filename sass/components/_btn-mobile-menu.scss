@@ -4,10 +4,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-}
-
-.btn-mobile-menu__icon-cross {
-  display: none;
+  z-index: 999;
 }
 
 .btn-mobile-menu.is-open {
@@ -18,4 +15,13 @@
   .btn-mobile-menu__icon-burger {
     display: none;
   }
+}
+
+.btn-mobile-menu__icon-cross {
+  display: none;
+}
+
+.btn-mobile-menu__icon-cross:focus,
+.btn-mobile-menu__icon-cross:hover {
+  fill: $fill;
 }
