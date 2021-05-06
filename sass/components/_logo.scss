@@ -2,6 +2,9 @@
   display: block;
   margin-top: 16px;
   margin-bottom: 16px;
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+  }
   // margin-right: 93px;
 
   font-family: 'Raleway', sans-serif;
