@@ -308,23 +308,20 @@ header {
   }
 }
 
-.contacts__email {
+.contacts__icon {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .contacts__email {
+  .contacts__icon {
     display: inline-block;
+    margin-right: 8px;
   }
 }
 
-.contacts__phone {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .contacts__phone {
-    display: inline-block;
+@media screen and (min-width: 1200px) {
+  .contacts__icon {
+    margin-right: 10px;
   }
 }
 

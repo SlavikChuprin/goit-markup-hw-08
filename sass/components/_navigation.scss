@@ -30,7 +30,7 @@
   line-height: 1.175;
   letter-spacing: 0.02em;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     padding: 0;
 
@@ -47,7 +47,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     margin-bottom: 0;
     &:not(:first-child) {
       margin-left: 50px;
@@ -61,12 +61,12 @@
 
   color: $text-h;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $tablet) {
   .navigation__current-page-link {
     color: $fill;
 
