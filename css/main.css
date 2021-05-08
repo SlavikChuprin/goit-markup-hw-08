@@ -440,7 +440,7 @@ header {
   height: 400px;
   margin: 0 auto;
   text-align: center;
-  padding: 200px 0;
+  padding: 118px 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -480,6 +480,7 @@ header {
   .hero {
     width: 100%;
     height: 600px;
+    padding: 200px 0;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg-desktop.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-desktop.jpg);
   }
@@ -494,12 +495,26 @@ header {
 
 .hero__title {
   margin-bottom: 30px;
-  font-size: 44px;
-  line-height: 1.36;
   text-align: center;
+  font-weight: 900;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media screen and (max-width: 1199px) {
+  .hero__title {
+    font-style: normal;
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .btn-serves-reserved {
