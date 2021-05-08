@@ -4,6 +4,9 @@
   margin-bottom: 16px;
   @media screen and (min-width: $tablet) {
     margin-right: 88px;
+    &--fotter {
+      margin: 0 auto;
+    }
   }
   @media screen and (min-width: $desktop) {
     margin-right: 93px;
