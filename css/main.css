@@ -401,6 +401,43 @@ header {
   fill: #2196f3;
 }
 
+.social-list {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .social-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 40px;
+    margin-top: 64px;
+  }
+  .social-list__item::after {
+    content: '';
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .social-list__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+}
+
 .btn-mobile-menu {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
