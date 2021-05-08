@@ -1046,6 +1046,7 @@ footer {
   .wrapper-footer {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    text-align: start;
   }
 }
 
