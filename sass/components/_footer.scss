@@ -3,12 +3,22 @@ footer {
 }
 
 .wrapper-footer {
-  display: flex;
+  display: block;
   padding-top: 60px;
   padding-bottom: 60px;
-  align-items: baseline;
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+
+    align-items: baseline;
+  }
 }
 
+.adress-wrapper {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
 .address-footer {
   margin-top: 20px;
   font-style: normal;
@@ -30,7 +40,15 @@ footer {
 }
 
 .icon-social-links-footer {
-  margin-left: 70px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-left: 165px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
 }
 
 .icon-social-links-footer__tittle {
@@ -47,6 +65,8 @@ footer {
 .social-links-list {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
 }
 .social-links-list__link {
   display: flex;
@@ -84,7 +104,10 @@ footer {
 }
 
 .form-subscription-wrapper {
-  margin-left: 93px;
+  margin: 0;
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
 }
 
 .form-subscription-wrapper__tittle {
@@ -98,9 +121,10 @@ footer {
   color: $background-color;
 }
 .form-subscription__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   margin: 0;
+  margin-bottom: 20px;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -109,6 +133,9 @@ footer {
   border-radius: 4px;
   background-color: $background-secondary;
   color: $main-text;
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+  }
 }
 
 .form-subscription__input:focus {
@@ -116,17 +143,21 @@ footer {
 }
 
 .form-subscription {
-  display: flex;
-  align-items: center;
+  display: block;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 .btn-subscribe {
   display: flex;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
 
   width: 200px;
   height: 50px;
-  margin-left: 12px;
   padding-left: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -136,7 +167,9 @@ footer {
   border-radius: 4px;
 
   background-color: $fill;
-
+  @media screen and (min-width: $desktop) {
+    margin-left: 12px;
+  }
   &:focus {
     outline: none;
   }
