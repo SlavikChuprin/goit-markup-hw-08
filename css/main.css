@@ -675,6 +675,12 @@ header {
   padding-bottom: 94px;
 }
 
+@media screen and (max-width: 1199px) {
+  .what-we-do {
+    display: none;
+  }
+}
+
 .what-we-do__tittle {
   margin-bottom: 50px;
 }
