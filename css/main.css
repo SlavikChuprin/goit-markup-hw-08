@@ -1546,34 +1546,70 @@ footer {
 }
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .btn-filters {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-filters {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .btn-filters {
+    margin-bottom: 50px;
+  }
 }
 
 .btn-filters_item + .btn-filters_item {
   margin-left: 8px;
 }
 
+@media screen and (max-width: 767px) {
+  .btn-filters_item:first-child {
+    margin-bottom: 15px;
+  }
+}
+
 .btn-filters__btn {
-  padding: 6px 22px;
-  min-width: 128px;
-  min-width: 38px;
+  padding-left: 22px;
+  padding-right: 22px;
+  height: 38px;
   border: 0px;
   border-radius: 4px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
