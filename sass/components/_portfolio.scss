@@ -27,8 +27,8 @@
 }
 
 .btn-filters_item {
-  & + & {
-    margin-left: 8px;
+  &:not(:last-child) {
+    margin-right: 8px;
   }
   @media screen and (max-width: 767px) {
     &:first-child {
@@ -72,7 +72,8 @@
   margin: -15px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
+  align-items: flex-start;
 }
 
 .project-card__tittle {
@@ -97,12 +98,18 @@
 
 .project-card {
   margin: 15px;
-  width: 370px;
   height: 404px;
 
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 .project-card:hover,
