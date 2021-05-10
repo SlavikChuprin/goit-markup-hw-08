@@ -11,6 +11,8 @@
 
     &.is-open {
       display: block;
+      position: fixed;
+      overflow-y: scroll;
       z-index: 100;
     }
   }
@@ -68,8 +70,6 @@
 }
 @media screen and (min-width: $tablet) {
   .navigation__current-page-link {
-    color: $fill;
-
     &::after {
       content: '';
       display: block;
@@ -82,6 +82,9 @@
 
       background: $fill;
       border-radius: 2px;
+      &:not(:last-child) {
+        display: none;
+      }
     }
   }
 
@@ -96,4 +99,8 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+
+.navigation__current-page-link {
+  color: $fill;
 }
