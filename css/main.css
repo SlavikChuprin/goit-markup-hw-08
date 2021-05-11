@@ -28,10 +28,16 @@ body {
 }
 
 .container {
-  width: 480px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -498,7 +504,6 @@ header {
 }
 
 .hero {
-  width: 480px;
   height: 400px;
   margin: 0 auto;
   text-align: center;
@@ -511,6 +516,7 @@ header {
 
 @media screen and (max-width: 767px) {
   .hero {
+    width: 100%;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg-mobile.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mobile.jpg);
   }
@@ -525,7 +531,7 @@ header {
 
 @media screen and (max-width: 1199px) and (min-width: 768px) {
   .hero {
-    width: 768px;
+    width: 100%;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg-tablet.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tablet.jpg);
   }
@@ -796,6 +802,7 @@ header {
 .our-team-list__member {
   width: 100%;
   text-align: center;
+  overflow: hidden;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -812,7 +819,6 @@ header {
   .our-team-list__member {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
-    overflow: hidden;
   }
 }
 
@@ -820,7 +826,6 @@ header {
   .our-team-list__member {
     width: calc((100% - 4 * 30px) / 4);
     margin: 15px;
-    overflow: hidden;
   }
 }
 
@@ -862,9 +867,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 16px;
-  padding-left: 122px;
-  padding-right: 122px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1618,6 +1624,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 399px) {
+  .btn-filters_item:last-child {
+    margin-top: 15px;
+  }
+}
+
 .btn-filters__btn {
   padding-left: 22px;
   padding-right: 22px;
@@ -1650,19 +1662,21 @@ footer {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.projecrts-cards-list {
-  margin: -15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+@media screen and (min-width: 768px) {
+  .projecrts-cards-list {
+    margin: -15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .project-card__tittle {
@@ -1683,8 +1697,7 @@ footer {
 }
 
 .project-card {
-  margin: 15px;
-  width: 450px;
+  width: 100%;
   height: 404px;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
@@ -1696,9 +1709,27 @@ footer {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.project-card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.project-card__image {
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+@media screen and (min-width: 480px) {
+  .project-card {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .project-card {
     width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
   }
 }
 
@@ -1715,6 +1746,7 @@ footer {
 }
 
 .project-card__description-wrapper {
+  width: 100%;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;

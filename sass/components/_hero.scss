@@ -1,10 +1,10 @@
 .hero {
-  width: 480px;
   height: 400px;
   margin: 0 auto;
   text-align: center;
   padding: 118px 0;
   @media screen and (max-width: 767px) {
+    width: 100%;
     background-image: linear-gradient(to right, $background-hero, $background-hero),
       url(../images/hero-bg-mobile.jpg);
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -15,7 +15,7 @@
     }
   }
   @media screen and (max-width: 1199px) and (min-width: $tablet) {
-    width: 768px;
+    width: 100%;
 
     background-image: linear-gradient(to right, $background-hero, $background-hero),
       url(../images/hero-bg-tablet.jpg);
