@@ -1764,6 +1764,7 @@ footer {
 }
 
 .project-card {
+  width: 100%;
   height: 404px;
   overflow: hidden;
   -webkit-transition-property: -webkit-box-shadow;
@@ -1781,10 +1782,10 @@ footer {
 }
 
 .project-card__image {
-  -o-object-fit: fill;
-     object-fit: fill;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media screen and (min-width: 480px) {
@@ -1813,6 +1814,7 @@ footer {
 }
 
 .project-card__description-wrapper {
+  width: 100%;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -1820,6 +1822,7 @@ footer {
 }
 
 .project-card__image-text-wrapper {
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
