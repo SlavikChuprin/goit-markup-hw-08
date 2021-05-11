@@ -31,7 +31,9 @@
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
-
+  @media screen and (max-width: 479px) {
+    font-size: 32px;
+  }
   @media screen and (min-width: $tablet) {
     display: flex;
     padding: 0;
@@ -43,12 +45,17 @@
 
 .navigation__item {
   height: 100%;
+
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 32px;
     }
   }
-
+  @media screen and (max-width: 479px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
   @media screen and (min-width: $tablet) {
     margin-bottom: 0;
     &:not(:first-child) {
