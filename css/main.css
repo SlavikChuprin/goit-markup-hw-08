@@ -1795,8 +1795,12 @@ footer {
 }
 
 .project-card__image {
+  height: 100%;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media screen and (min-width: 480px) {

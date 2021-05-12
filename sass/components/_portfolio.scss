@@ -111,7 +111,10 @@
     margin-bottom: 30px;
   }
   &__image {
+    height: 100%;
+    width: 100%;
     object-fit: contain;
+    object-position: center;
   }
   transition-property: box-shadow;
   transition-duration: 250ms;
