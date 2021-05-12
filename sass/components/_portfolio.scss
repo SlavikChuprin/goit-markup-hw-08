@@ -110,7 +110,9 @@
   &:not(:last-child) {
     margin-bottom: 30px;
   }
-
+  &__image {
+    object-fit: contain;
+  }
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

@@ -81,6 +81,10 @@
   font-size: 20px;
   text-align: center;
   line-height: 1.5;
+
+  @media screen and (min-width: 320px) {
+    font-size: 12px;
+  }
   @media screen and (min-width: $desktop) {
     line-height: 1.15;
   }
@@ -114,6 +118,12 @@
     border: 1px solid $fill;
     outline: none;
     cursor: pointer;
+  }
+
+  @media screen and (min-width: 320px) {
+    height: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
 
