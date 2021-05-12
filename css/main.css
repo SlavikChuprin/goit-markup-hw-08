@@ -1460,7 +1460,7 @@ footer {
   line-height: 1.5;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
   .registration-form__tittle {
     font-size: 12px;
   }
@@ -1500,7 +1500,7 @@ footer {
   cursor: pointer;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
   .signup-form__input {
     height: 30px;
     padding-top: 8px;
